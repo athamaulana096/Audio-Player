@@ -1,4 +1,5 @@
 import './style.css';
+import { convertTime } from './utils.js';
 
 const AudioContext = window.AudioContext ?? window.webkitAudioContext;
 const audioCtx = new AudioContext();
@@ -11,6 +12,11 @@ const time = document.getElementById('time');
 const duration = document.getElementById('duration');
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);
+
+window.addEventListener('load', () => {
+  time.textContent = convertTime(audioElement.currentTime);
+  duration.textContent = convertTime(audioElement.duration);
+});
 
 playBtn.addEventListener('click', (event) => {
   const targetEl = event.target;

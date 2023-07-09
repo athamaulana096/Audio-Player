@@ -20,7 +20,7 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ffffff;
+  color: #222831;
   margin-top: 60px;
 
   display: flex;
@@ -94,6 +94,7 @@ button {
   font-size: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
+  color: #eeeeee;
 }
 
 #volume[type='range'][orient='vertical'] {
