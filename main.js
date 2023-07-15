@@ -37,6 +37,10 @@ playBtn.addEventListener('click', (event) => {
   false;
 });
 
+audioElement.addEventListener('ended', () => {
+  playBtn.setAttribute('class', 'paused');
+});
+
 audioElement.addEventListener('timeupdate', () => {
   seeker.value = audioElement.currentTime;
   time.textContent = convertTime(audioElement.currentTime);
