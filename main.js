@@ -43,6 +43,10 @@ audioElement.addEventListener('timeupdate', () => {
 });
 seeker.setAttribute('max', audioElement.duration);
 
+seeker.addEventListener('input', () => {
+  audioElement.currentTime = seeker.value;
+});
+
 const gainNode = audioCtx.createGain();
 
 volumeSlider.addEventListener('input', () => {
