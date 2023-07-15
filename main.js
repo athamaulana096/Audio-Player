@@ -37,6 +37,12 @@ playBtn.addEventListener('click', (event) => {
   false;
 });
 
+audioElement.addEventListener('timeupdate', () => {
+  seeker.value = audioElement.currentTime;
+  time.textContent = convertTime(audioElement.currentTime);
+});
+seeker.setAttribute('max', audioElement.duration);
+
 const gainNode = audioCtx.createGain();
 
 volumeSlider.addEventListener('input', () => {
